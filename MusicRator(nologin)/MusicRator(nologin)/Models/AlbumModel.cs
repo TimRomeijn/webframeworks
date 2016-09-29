@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace MusicRator_nologin_.Models
+{
+    public class AlbumModel
+    {
+        public string AlbumName { get; set; }
+
+        public string Artist { get; set; }
+
+        public int ReleaseYear { get; set; }
+
+        public string Description { get; set; }
+
+        public string ImageUrl { get; set; }
+    }
+}
