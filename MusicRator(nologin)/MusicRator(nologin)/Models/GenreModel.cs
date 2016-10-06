@@ -6,12 +6,13 @@ using System.Web;
 
 namespace MusicRator_nologin_.Models
 {
-    public class GenreModel : ICollection<AlbumModel>
+    public class GenreModel 
     {
         [Key]
         public int Id { get; set; }
 
         public string Name { get; set; }
 
+        public ICollection<ReviewModel> Albums { get; set; }
     }
 }

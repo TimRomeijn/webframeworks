@@ -14,5 +14,7 @@ namespace MusicRator_nologin_.Models
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
+
+        public ICollection<ReviewModel> Reviews { get; set; }
     }
 }

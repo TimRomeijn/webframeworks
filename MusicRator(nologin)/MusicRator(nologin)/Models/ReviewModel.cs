@@ -18,10 +18,14 @@ namespace MusicRator_nologin_.Models
 
         public DateTime Date { get; set; }
 
-        [ForeignKey]
-        public UserModel UserId { get; set; }
+        [ForeignKey("User")]
+        public int UserId { get; set; }
 
-        [ForeignKey]
-        public AlbumModel AlbumId { get; set; }
+        public UserModel User { get; set; }
+
+        [ForeignKey("Album")]
+        public int AlbumId { get; set; }
+
+        public AlbumModel Album { get; set; }
     }
 }

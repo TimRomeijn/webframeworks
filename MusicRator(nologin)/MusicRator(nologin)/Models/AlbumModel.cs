@@ -7,13 +7,15 @@ using System.Web;
 
 namespace MusicRator_nologin_.Models
 {
-    public class AlbumModel: ICollection<ReviewModel>
+    public class AlbumModel
     {
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey]
-        public GenreModel GenreId { get; set; }
+        [ForeignKey("Genre")]
+        public int GenreId { get; set; }
+
+        public GenreModel Genre { get; set; }
 
         public string Title { get; set; }
 
@@ -24,5 +26,7 @@ namespace MusicRator_nologin_.Models
         public string Description { get; set; }
 
         public string ImageUrl { get; set; }
+
+        public ICollection<ReviewModel> Reviews { get; set; }
     }
 }
