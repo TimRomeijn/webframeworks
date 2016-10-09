@@ -21,6 +21,15 @@ namespace MusicRator_nologin_.Controllers
             return View(albums.ToList());
         }
 
+        //Show all the current albums to review
+        public ActionResult Albums()
+        {
+            var albums = db.Albums.Include(a => a.Genre);
+            return View(albums.ToList());
+        }
+
+
+
         // GET: Albums/Details/5
         public ActionResult Details(int? id)
         {
