@@ -159,12 +159,17 @@
     <Compile Include="Controllers\AlbumsController.cs" />
     <Compile Include="Controllers\GenresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201610060935475_initial.cs" />
     <Compile Include="Migrations\201610060935475_initial.Designer.cs">
       <DependentUpon>201610060935475_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610161459432_AlbumList.cs" />
+    <Compile Include="Migrations\201610161459432_AlbumList.Designer.cs">
+      <DependentUpon>201610161459432_AlbumList.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AlbumModel.cs" />
@@ -225,6 +230,11 @@
     <Content Include="Views\Albums\Details.cshtml" />
     <Content Include="Views\Albums\Edit.cshtml" />
     <Content Include="Views\Albums\Index.cshtml" />
+    <Content Include="Views\Reviews\Create.cshtml" />
+    <Content Include="Views\Reviews\Delete.cshtml" />
+    <Content Include="Views\Reviews\Details.cshtml" />
+    <Content Include="Views\Reviews\Edit.cshtml" />
+    <Content Include="Views\Reviews\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -240,6 +250,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610060935475_initial.resx">
       <DependentUpon>201610060935475_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610161459432_AlbumList.resx">
+      <DependentUpon>201610161459432_AlbumList.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

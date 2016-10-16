@@ -57,3 +57,4 @@ D:\Github\webframeworks\MusicRator(nologin)\MusicRator(nologin)\obj\Debug\MusicR
 D:\Github\webframeworks\MusicRator(nologin)\MusicRator(nologin)\obj\Debug\MusicRator(nologin).pdb
 D:\Github\webframeworks\MusicRator(nologin)\MusicRator(nologin)\obj\Debug\MusicRator_nologin_.Migrations.initial.resources
 D:\Github\webframeworks\MusicRator(nologin)\MusicRator(nologin)\obj\Debug\MusicRator(nologin).csproj.GenerateResource.Cache
+D:\Github\webframeworks\MusicRator(nologin)\MusicRator(nologin)\obj\Debug\MusicRator_nologin_.Migrations.AlbumList.resources

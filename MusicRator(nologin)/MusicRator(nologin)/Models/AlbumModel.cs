@@ -28,5 +28,7 @@ namespace MusicRator_nologin_.Models
         public string ImageUrl { get; set; }
 
         public ICollection<ReviewModel> Reviews { get; set; }
+
+        public List<AlbumModel> Albums { get; set; }
     }
 }

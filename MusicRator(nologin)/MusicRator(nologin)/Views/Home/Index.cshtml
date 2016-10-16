@@ -2,3 +2,62 @@
     ViewBag.Title = "Home Page";
 }
 
+
+
+
+<div>
+    <h1> Recently Added Albums </h1>
+
+
+    <table>
+        <tr>
+            <th>
+                Album
+            </th>
+            <th>
+                Genre
+            </th>
+            <th>
+                Omschrijving
+            </th>
+            <th>
+                Titel
+            </th>
+            <th>
+                Artiest
+            </th>
+        </tr>
+
+        @foreach (var album in Model.AlbumModel.Albums)
+        {
+
+            <tr>
+                <td>
+                    @album.ImageUrl
+                </td>
+                <td>
+                    @album.Genre.Name
+                </td>
+                <td>
+                    @album.Description
+                </td>
+                <td>
+                    @album.Title
+                </td>
+                <td>
+                    @album.Artist
+                </td>
+            </tr>
+
+        }
+
+    </table>
+
+</div>
+
+
+<p>
+
+    @Html.ActionLink("Album toevoegen", "Create", "Albums")
+</p>
+
