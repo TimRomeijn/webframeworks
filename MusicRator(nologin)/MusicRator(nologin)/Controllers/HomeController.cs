@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace MusicRator_nologin_.Controllers
 {
@@ -14,25 +15,17 @@ namespace MusicRator_nologin_.Controllers
         public ActionResult Index()
         {
 
-
-
-            return View();
-        }
-
-        public ActionResult AlbumsReview()
-        {
             ViewBag.Message = "These are the albums ready for reviewing!";
 
             AlbumModel viewData = new AlbumModel();
             viewData.Albums = db.Albums.
-                //Include(m => m.Genre).
+                Include(m => m.Genre).
                 //Where(t => t.UserAccountId == userId).
                 OrderByDescending(t => t.Id).
                 Take(5).ToList();
 
             return View(viewData);
         }
-
 
 
         public ActionResult About()

@@ -7,17 +7,22 @@
 <h2>Details</h2>
 
 <div>
-    <h4>AlbumModel</h4>
+   
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Genre.Name)
+            Albumcover
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Genre.Name)
+            <img src="@Html.DisplayFor(model => model.ImageUrl)" />
         </dd>
-
+        <dt>
+            Genre
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Title)
         </dt>
@@ -50,13 +55,7 @@
             @Html.DisplayFor(model => model.Description)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ImageUrl)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ImageUrl)
-        </dd>
+      
 
     </dl>
 </div>
