@@ -172,6 +172,14 @@
     <Compile Include="Migrations\201610161459432_AlbumList.Designer.cs">
       <DependentUpon>201610161459432_AlbumList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610270911254_inlogtabel.cs" />
+    <Compile Include="Migrations\201610270911254_inlogtabel.Designer.cs">
+      <DependentUpon>201610270911254_inlogtabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610270956480_registratieinfo.cs" />
+    <Compile Include="Migrations\201610270956480_registratieinfo.Designer.cs">
+      <DependentUpon>201610270956480_registratieinfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AlbumModel.cs" />
     <Compile Include="Models\GenreModel.cs" />
@@ -238,6 +246,7 @@
     <Content Include="Views\Reviews\Edit.cshtml" />
     <Content Include="Views\Reviews\Index.cshtml" />
     <Content Include="Views\Access\Login.cshtml" />
+    <Content Include="Views\Access\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -256,6 +265,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610161459432_AlbumList.resx">
       <DependentUpon>201610161459432_AlbumList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610270911254_inlogtabel.resx">
+      <DependentUpon>201610270911254_inlogtabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610270956480_registratieinfo.resx">
+      <DependentUpon>201610270956480_registratieinfo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

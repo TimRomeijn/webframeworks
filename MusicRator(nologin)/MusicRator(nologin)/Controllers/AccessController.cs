@@ -1,4 +1,5 @@
-﻿using MusicRator_nologin_.ViewModels;
+﻿using MusicRator_nologin_.Models;
+using MusicRator_nologin_.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,8 @@ namespace MusicRator_nologin_.Controllers
 {
     public class AccessController : Controller
     {
+        private MusicRatorContext db = new MusicRatorContext();
+
         // GET: Access
         public ActionResult Index()
         {
@@ -26,18 +29,47 @@ namespace MusicRator_nologin_.Controllers
         {
             if (ModelState.IsValid)
             {
-                if(model.UserName == "test" && model.Password == "1234")
+
+                var users = db.Users.Include
+
+                if(model.UserName == model.UserName && model.Password == model.Password)
                 {
                     FormsAuthentication.SetAuthCookie(model.UserName, true);
 
-                    return RedirectToAction("Index", "Secure");
+                    return RedirectToAction("Index","Home");
                 }
                 else
                 {
                     ModelState.AddModelError("", "Deze combinatie is niet bekend");
+
+                    return RedirectToAction("Login");
                 }
             }
 
+            return View();
+        }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(UserModel User)
+        {
+            //todo : check user data 
+
+            // add to database
+            if (ModelState.IsValid)
+            {
+                db.Users.Add(User);
+                db.SaveChanges();
+                return RedirectToAction("Login");
+            }
+            // redirect..
+
+            // maybe login user ...
             return View();
         }
     }

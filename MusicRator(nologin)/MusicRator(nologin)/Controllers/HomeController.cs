@@ -28,18 +28,25 @@ namespace MusicRator_nologin_.Controllers
         }
 
 
-        public ActionResult About()
+      
+        public ActionResult Album()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+        //public ActionResult About()
+        //{
+        //    ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
+        //    return View();
+        //}
+
+        //public ActionResult Contact()
+        //{
+        //    ViewBag.Message = "Your contact page.";
+
+        //    return View();
+        //}
+
     }
 }

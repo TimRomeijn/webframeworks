@@ -50,7 +50,7 @@ namespace MusicRator_nologin_.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,GenreId,Title,Artist,ReleaseYear,Description,ImageUrl")] AlbumModel albumModel)
+        public ActionResult Create( AlbumModel albumModel)
         {
             if (ModelState.IsValid)
             {
