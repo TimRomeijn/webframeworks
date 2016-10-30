@@ -157,6 +157,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccessController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AlbumsController.cs" />
     <Compile Include="Controllers\GenresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -180,6 +181,10 @@
     <Compile Include="Migrations\201610270956480_registratieinfo.Designer.cs">
       <DependentUpon>201610270956480_registratieinfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610301543207_final.cs" />
+    <Compile Include="Migrations\201610301543207_final.Designer.cs">
+      <DependentUpon>201610301543207_final.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AlbumModel.cs" />
     <Compile Include="Models\GenreModel.cs" />
@@ -188,6 +193,7 @@
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\ReviewViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -250,6 +256,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -271,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610270956480_registratieinfo.resx">
       <DependentUpon>201610270956480_registratieinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610301543207_final.resx">
+      <DependentUpon>201610301543207_final.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MusicRator_nologin_.Models;
+using System.Text;
 
 namespace MusicRator_nologin_.Controllers
 {
@@ -130,5 +131,21 @@ namespace MusicRator_nologin_.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult PostReview()
+        {
+            ReviewModel model = new ReviewModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult PostReview(ReviewModel model)
+        {
+            StringBuilder sbInterest = new StringBuilder();
+            sbInterest.Append("<b>Review :</b> " + model.ReviewText + "<br/>");
+            sbInterest.Append("<b>Rating :</b> " + model.Rating + "<br/>");
+            return Content(sbInterest.ToString());
+        }
+
     }
 }
